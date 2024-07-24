@@ -1,190 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-07-24T21:53:53.299875" rpa="false" schemaversion="5">
-<suite id="s1" name="testScript" source="/Users/ruangguru/Work/andrewdvd001/robotFramework/tests/ProductOne/web/testScript.robot">
-<test id="s1-t1" name="Verify user successfully Login in Brain Academy with valid credential" line="8">
-<kw name="Begin Web Test">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-07-24T22:51:44.204451" rpa="false" schemaversion="5">
+<suite id="s1" name="ruangguruAuth" source="/Users/ruangguru/Work/andrewdvd001/robotFramework/tests/ProductOne/web/ruangguruAuth.robot">
+<test id="s1-t1" name="Verify user successfully Login in Brain Academy with valid credential" line="9">
+<kw name="Begin Web Test" owner="common">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:53:53.382086" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<msg time="2024-07-24T22:51:44.286867" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
 <arg>about:blank</arg>
 <arg>Chrome</arg>
 <arg>options=add_argument("--start-maximized")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-07-24T21:53:53.381984" elapsed="0.906714"/>
+<status status="PASS" start="2024-07-24T22:51:44.286760" elapsed="0.920949"/>
 </kw>
-<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
-<arg>3s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-07-24T21:53:54.289015" elapsed="0.000658"/>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-07-24T22:51:45.208050" elapsed="0.000264"/>
 </kw>
-<status status="PASS" start="2024-07-24T21:53:53.381646" elapsed="0.908097"/>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-07-24T22:51:45.208396" elapsed="1.005667"/>
 </kw>
-<kw name="Access brainacademy">
+<status status="PASS" start="2024-07-24T22:51:44.286411" elapsed="1.927768"/>
+</kw>
+<kw name="Access brainacademy" owner="brainacademy">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:53:54.290512" level="INFO">Opening url 'https://app.brainacademy.id'</msg>
+<msg time="2024-07-24T22:51:46.214668" level="INFO">Opening url 'https://app.brainacademy.id'</msg>
 <arg>https://app.brainacademy.id</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-07-24T21:53:54.290451" elapsed="1.058484"/>
+<status status="PASS" start="2024-07-24T22:51:46.214603" elapsed="2.007672"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:53:55.481121" level="INFO">Current page contains text 'Brain Academy Online'.</msg>
+<msg time="2024-07-24T22:51:50.241527" level="INFO">Current page contains text 'Brain Academy Online'.</msg>
 <arg>Brain Academy Online</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-07-24T21:53:55.349053" elapsed="0.132127"/>
+<status status="PASS" start="2024-07-24T22:51:48.222403" elapsed="2.019199"/>
 </kw>
-<status status="PASS" start="2024-07-24T21:53:54.290011" elapsed="1.191237"/>
+<status status="PASS" start="2024-07-24T22:51:46.214403" elapsed="4.027301"/>
 </kw>
-<kw name="Open login page">
+<kw name="Open login page" owner="brainacademy">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:53:55.482291" level="INFO">Clicking link 'Masuk/Daftar'.</msg>
+<msg time="2024-07-24T22:51:50.242357" level="INFO">Clicking link 'Masuk/Daftar'.</msg>
 <arg>Masuk/Daftar</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-24T21:53:55.481835" elapsed="1.467293"/>
+<status status="PASS" start="2024-07-24T22:51:50.242114" elapsed="4.832643"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:53:56.958463" level="INFO">Current page contains text 'Yuk, daftar atau masuk sekarang.'.</msg>
+<msg time="2024-07-24T22:51:57.095165" level="INFO">Current page contains text 'Yuk, daftar atau masuk sekarang.'.</msg>
 <arg>Yuk, daftar atau masuk sekarang.</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-07-24T21:53:56.949267" elapsed="0.009280"/>
+<status status="PASS" start="2024-07-24T22:51:55.074951" elapsed="2.020284"/>
 </kw>
-<status status="PASS" start="2024-07-24T21:53:55.481406" elapsed="1.477199"/>
+<status status="PASS" start="2024-07-24T22:51:50.241941" elapsed="6.853358"/>
 </kw>
-<kw name="Fill correct email">
+<kw name="Fill correct email" owner="brainacademy">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:53:56.959012" level="INFO">Typing text 'andrew.david@ruangguru.com' into text field 'name=emailOrPhone'.</msg>
+<msg time="2024-07-24T22:51:57.095738" level="INFO">Typing text 'andrew.david@ruangguru.com' into text field 'name=emailOrPhone'.</msg>
 <arg>name=emailOrPhone</arg>
 <arg>andrew.david@ruangguru.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-24T21:53:56.958903" elapsed="0.184890"/>
+<status status="PASS" start="2024-07-24T22:51:57.095625" elapsed="3.203808"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:53:57.144055" level="INFO">Clicking button 'Lanjutkan'.</msg>
+<msg time="2024-07-24T22:52:00.299671" level="INFO">Clicking button 'Lanjutkan'.</msg>
 <arg>Lanjutkan</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-24T21:53:57.143913" elapsed="3.103690"/>
+<status status="PASS" start="2024-07-24T22:52:00.299558" elapsed="4.077895"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:54:00.256997" level="INFO">Current page contains text 'Halo! Selamat datang kembali!'.</msg>
+<msg time="2024-07-24T22:52:06.395479" level="INFO">Current page contains text 'Halo! Selamat datang kembali!'.</msg>
 <arg>Halo! Selamat datang kembali!</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-07-24T21:54:00.247715" elapsed="0.009335"/>
+<status status="PASS" start="2024-07-24T22:52:04.377578" elapsed="2.017970"/>
 </kw>
-<status status="PASS" start="2024-07-24T21:53:56.958750" elapsed="3.298356"/>
+<status status="PASS" start="2024-07-24T22:51:57.095456" elapsed="9.300155"/>
 </kw>
-<kw name="Fill correct password">
+<kw name="Fill correct password" owner="brainacademy">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:54:00.257747" level="INFO">Typing text 'adasubally' into text field 'name=password'.</msg>
+<msg time="2024-07-24T22:52:06.396053" level="INFO">Typing text 'adasubally' into text field 'name=password'.</msg>
 <arg>name=password</arg>
 <arg>adasubally</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-24T21:54:00.257555" elapsed="0.255251"/>
+<status status="PASS" start="2024-07-24T22:52:06.395938" elapsed="3.058371"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:54:00.513029" level="INFO">Clicking button 'Masuk'.</msg>
+<msg time="2024-07-24T22:52:09.454533" level="INFO">Clicking button 'Masuk'.</msg>
 <arg>Masuk</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-24T21:54:00.512922" elapsed="3.087046"/>
+<status status="PASS" start="2024-07-24T22:52:09.454429" elapsed="4.076228"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:54:04.196495" level="INFO">Current page contains text 'Andrew D'.</msg>
+<msg time="2024-07-24T22:52:15.572809" level="INFO">Current page contains text 'Andrew D'.</msg>
 <arg>Andrew D</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-07-24T21:54:03.600120" elapsed="0.596534"/>
+<status status="PASS" start="2024-07-24T22:52:13.530829" elapsed="2.042844"/>
 </kw>
-<status status="PASS" start="2024-07-24T21:54:00.257238" elapsed="3.939562"/>
+<status status="PASS" start="2024-07-24T22:52:06.395799" elapsed="9.177977"/>
 </kw>
-<kw name="Close browser">
+<kw name="Close browser" owner="common">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-07-24T21:54:04.197237" elapsed="0.097614"/>
+<status status="PASS" start="2024-07-24T22:52:15.574300" elapsed="1.064226"/>
 </kw>
-<status status="PASS" start="2024-07-24T21:54:04.197033" elapsed="0.097882"/>
+<status status="PASS" start="2024-07-24T22:52:15.574064" elapsed="1.064653"/>
 </kw>
 <doc>Testcase for Login Cases</doc>
 <tag>TC1 Smoke Auth</tag>
-<status status="PASS" start="2024-07-24T21:53:53.381342" elapsed="10.913673"/>
+<status status="PASS" start="2024-07-24T22:51:44.286097" elapsed="32.352910"/>
 </test>
-<test id="s1-t2" name="Verify user failed to Login in Brain Academy with invalid password" line="19">
-<kw name="Begin Web Test">
+<test id="s1-t2" name="Verify user failed to Login in Brain Academy with invalid password" line="20">
+<kw name="Begin Web Test" owner="common">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:54:04.295633" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<msg time="2024-07-24T22:52:16.640037" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
 <arg>about:blank</arg>
 <arg>Chrome</arg>
 <arg>options=add_argument("--start-maximized")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-07-24T21:54:04.295536" elapsed="0.810658"/>
+<status status="PASS" start="2024-07-24T22:52:16.639874" elapsed="1.835601"/>
 </kw>
-<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
-<arg>3s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-07-24T21:54:05.106449" elapsed="0.000530"/>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-07-24T22:52:18.475779" elapsed="0.000215"/>
 </kw>
-<status status="PASS" start="2024-07-24T21:54:04.295409" elapsed="0.811626"/>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-07-24T22:52:18.476068" elapsed="1.005741"/>
 </kw>
-<kw name="Access brainacademy">
+<status status="PASS" start="2024-07-24T22:52:16.639662" elapsed="2.842313"/>
+</kw>
+<kw name="Access brainacademy" owner="brainacademy">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:54:05.107417" level="INFO">Opening url 'https://app.brainacademy.id'</msg>
+<msg time="2024-07-24T22:52:19.482575" level="INFO">Opening url 'https://app.brainacademy.id'</msg>
 <arg>https://app.brainacademy.id</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-07-24T21:54:05.107297" elapsed="1.043157"/>
+<status status="PASS" start="2024-07-24T22:52:19.482511" elapsed="5.184595"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:54:06.252238" level="INFO">Current page contains text 'Brain Academy Online'.</msg>
+<msg time="2024-07-24T22:52:26.680444" level="INFO">Current page contains text 'Brain Academy Online'.</msg>
 <arg>Brain Academy Online</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-07-24T21:54:06.150608" elapsed="0.101700"/>
+<status status="PASS" start="2024-07-24T22:52:24.667228" elapsed="2.013300"/>
 </kw>
-<status status="PASS" start="2024-07-24T21:54:05.107162" elapsed="1.145207"/>
+<status status="PASS" start="2024-07-24T22:52:19.482306" elapsed="7.198287"/>
 </kw>
-<kw name="Open login page">
+<kw name="Open login page" owner="brainacademy">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:54:06.252960" level="INFO">Clicking link 'Masuk/Daftar'.</msg>
+<msg time="2024-07-24T22:52:26.681048" level="INFO">Clicking link 'Masuk/Daftar'.</msg>
 <arg>Masuk/Daftar</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-24T21:54:06.252843" elapsed="1.533179"/>
+<status status="PASS" start="2024-07-24T22:52:26.680917" elapsed="4.581088"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:54:07.793641" level="INFO">Current page contains text 'Yuk, daftar atau masuk sekarang.'.</msg>
+<msg time="2024-07-24T22:52:33.278997" level="INFO">Current page contains text 'Yuk, daftar atau masuk sekarang.'.</msg>
 <arg>Yuk, daftar atau masuk sekarang.</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-07-24T21:54:07.786154" elapsed="0.007538"/>
+<status status="PASS" start="2024-07-24T22:52:31.262130" elapsed="2.016939"/>
 </kw>
-<status status="PASS" start="2024-07-24T21:54:06.252671" elapsed="1.541075"/>
+<status status="PASS" start="2024-07-24T22:52:26.680766" elapsed="6.598445"/>
 </kw>
-<kw name="Fill correct email">
+<kw name="Fill correct email" owner="brainacademy">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:54:07.794256" level="INFO">Typing text 'andrew.david@ruangguru.com' into text field 'name=emailOrPhone'.</msg>
+<msg time="2024-07-24T22:52:33.279634" level="INFO">Typing text 'andrew.david@ruangguru.com' into text field 'name=emailOrPhone'.</msg>
 <arg>name=emailOrPhone</arg>
 <arg>andrew.david@ruangguru.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-24T21:54:07.794102" elapsed="0.185468"/>
+<status status="PASS" start="2024-07-24T22:52:33.279527" elapsed="3.165540"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:54:07.980248" level="INFO">Clicking button 'Lanjutkan'.</msg>
+<msg time="2024-07-24T22:52:36.445306" level="INFO">Clicking button 'Lanjutkan'.</msg>
 <arg>Lanjutkan</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-24T21:54:07.979930" elapsed="3.116093"/>
+<status status="PASS" start="2024-07-24T22:52:36.445198" elapsed="4.083845"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-07-24T21:54:11.105650" level="INFO">Current page contains text 'Halo! Selamat datang kembali!'.</msg>
+<msg time="2024-07-24T22:52:42.552490" level="INFO">Current page contains text 'Halo! Selamat datang kembali!'.</msg>
 <arg>Halo! Selamat datang kembali!</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-07-24T21:54:11.096213" elapsed="0.009491"/>
+<status status="PASS" start="2024-07-24T22:52:40.529199" elapsed="2.023363"/>
 </kw>
-<status status="PASS" start="2024-07-24T21:54:07.793895" elapsed="3.311862"/>
+<status status="PASS" start="2024-07-24T22:52:33.279363" elapsed="9.273261"/>
 </kw>
-<kw name="Close browser">
+<kw name="Close browser" owner="common">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-07-24T21:54:11.106066" elapsed="0.103425"/>
+<status status="PASS" start="2024-07-24T22:52:42.552964" elapsed="1.058977"/>
 </kw>
-<status status="PASS" start="2024-07-24T21:54:11.105897" elapsed="0.103670"/>
+<status status="PASS" start="2024-07-24T22:52:42.552818" elapsed="1.059230"/>
 </kw>
 <doc>Testcase for Login failed Cases</doc>
 <tag>TC2 Smoke Auth</tag>
-<status status="PASS" start="2024-07-24T21:54:04.295166" elapsed="6.914510"/>
+<status status="PASS" start="2024-07-24T22:52:16.639249" elapsed="26.972963"/>
 </test>
 <doc>This is some basic info about the whole SUITE</doc>
-<status status="PASS" start="2024-07-24T21:53:53.300381" elapsed="17.909573"/>
+<status status="PASS" start="2024-07-24T22:51:44.204965" elapsed="59.407666"/>
 </suite>
 <statistics>
 <total>
@@ -195,7 +205,7 @@
 <stat pass="1" fail="0" skip="0">TC2 Smoke Auth</stat>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="testScript">testScript</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="ruangguruAuth">ruangguruAuth</stat>
 </suite>
 </statistics>
 <errors>
