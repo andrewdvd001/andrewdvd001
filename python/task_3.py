@@ -15,24 +15,28 @@ Instructions:
 '''
 
 # Task 3
+# Variable
 todo_list = ["Buy groceries", "Study Python", "Call friend"]
 task_detail = {"priority_task": "Study Python"}
 
+# Print Variable
 print("Tasks:")
 for todo in todo_list:
     print(todo)
 
+# Update Variable
 todo_list.append("Exercise")
 todo_list.remove("Study Python")
 print()
 print(f"Updated list: {todo_list}")
 print("Tasks details:")
-
 task_detail["due_date"] = "2025-06-15"
 
+# Print Updated Variable
 for key, value in task_detail.items():
     print(f"{key}: {value}")
 
+# Bonus
 if "Study Python" not in todo_list:
     print("Bonus: Study Python is not in the list!")
 else:

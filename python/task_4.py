@@ -17,8 +17,7 @@ Instructions:
 '''
 
 # Task 4
-
-
+# Function
 def calculate_average(grades):
     if not grades:
         return 0.0
@@ -37,12 +36,13 @@ def add_grade(grades, new_grade):
     new_grades.append(new_grade)
     return new_grades
 
+# Print Grades
 grades = [85, 90, 95, 60]
-
 print(f"Grades: {grades}")
 print(f"Average: {calculate_average(grades)}")
 print(f"Status: {get_grade_status(calculate_average(grades))}")
 
+# Print Updated Grades
 updated_grades = add_grade(grades, 88)
 new_average = calculate_average(updated_grades)
 print(f"Bonus - New grade added: {updated_grades}")
