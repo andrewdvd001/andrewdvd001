@@ -15,8 +15,12 @@ Instructions:
 7. Bonus (Optional): Add a condition to check if the input is not between 1 and 10, and print "Please enter a number between 1 and 10." if invalid.
 '''
 
+# Task 2
+#Variable
 secret_number = 5
 guess_count = 0
+
+# Flow
 while True:
     try:
         guess = int(input("Guess the number (1-10): "))
