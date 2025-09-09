@@ -4,7 +4,7 @@ class LaptopBattery:
     
     @property
     def level(self):
-        return f"Current battery level is {self.__level}%"
+        return self.__level
 
     def drain(self, amount):
         if amount > self.__level:
@@ -16,11 +16,3 @@ class LaptopBattery:
     def charge(self):
         self.__level = 100
     
-battery = LaptopBattery()
-print(battery.level)       # 100
-battery.drain(30)
-print(battery.level)       # 70
-battery.drain(100)
-print(battery.level)       # 0
-battery.charge()
-print(battery.level)       # 100
