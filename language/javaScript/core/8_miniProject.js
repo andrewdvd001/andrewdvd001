@@ -6,20 +6,14 @@ let users = [
 
 function ageValidator(age) {
     if (age >= 18) {
-        console.log(`Adult`)}
-    else {console.log(`Underage`)}
+        return `Adult`
+    } else {
+        return `Underage`
+    };
 }
 
-function repeater(name){
-    for (let counter = 1; counter <= (name.length - 1); counter++ )
-        let name = name[counter].name
-        let age = age[counter].age
-}
-
-function delay() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve(users.name + `-` + users.a);
-        }, 2000);
-    });
+for (let counter = 0; counter < (users.length); counter++ ){
+        let name = users[counter].name
+        let age = users[counter].age
+        console.log(name + ` - ` + ageValidator(age))
 }
